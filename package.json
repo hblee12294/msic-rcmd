@@ -2,11 +2,16 @@
   "name": "msic_rcmd",
   "version": "1.0.0",
   "description": "Music recommandation SAP using React & express.js",
+  "engines": {
+    "node": "8.9.0"
+  },
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "client": "cd client && npm start",
     "server": "node server.js",
+    "start": "node server.js",
+    "heroku-postbuild": "cd client/ && npm install && npm install --only=dev --no-shrinkwrap && npm run build",
     "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\""
   },
   "author": "",
@@ -18,5 +23,15 @@
   },
   "devDependencies": {
     "concurrently": "^3.5.1"
-  }
+  },
+  "cacheDirectories": [
+    "node_modules",
+    "client/node_modules"
+  ],
+  "keywords": [
+    "node",
+    "heroku",
+    "create-react-app",
+    "react"
+  ]
 }
