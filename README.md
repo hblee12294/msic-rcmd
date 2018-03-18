@@ -33,39 +33,6 @@
     |   |---AddPopup
     |   
 
-## Assignments
-#### Hongbin Li
-Components:
-
-    App(Included)  
-    |--Header  
-    |  |--Search  
-    |  |--Login  
-Server: Skeleton  
- 
-#### Fing Fu
-Components:
-
-    |---Navigation
-    |   |---Filer
-    |   |---FilterControl
-Server: Services  
- 
-#### Zhongyu Shi
-Components:
-
-    |---Music(Included)
-    |   |---EditPopup
-    |   |---AddPopup
- 
-#### Guodong Shi
-Components:
-
-    |   |---Toolbar
-    |   |---Item
-    |   |   |---Field
-    |   |   |---Button (Save + Delete)
-
 ## Directory and file memo
 * `plum/src/client` - For client(React) code.
 * `plum/src/obsolete` - For obsolete versions.
