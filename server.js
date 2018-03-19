@@ -1,11 +1,12 @@
 // --- Initialization ---
 const express = require('express');
 const bodyParser = require('body-parser');
+const path = require('path');
 const multer = require('multer');
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-app.use(express.static('public'));
+app.use(express.static(path.resolve(__dirname, './client/build')));
 const jsonParser = bodyParser.json({extended: true, type: '*/*'});
 const upload = require('./multerUtil').single('image');
 
