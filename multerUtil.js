@@ -1,11 +1,12 @@
-let multer = require('multer');
+const multer = require('multer');
+const path = require('path');
 
-let storage = multer.diskStorage({
+const storage = multer.diskStorage({
 	destination: function (req, file, cb) {
-		cb(null, './client/public/images')
+		cb(null, path.resolve(__dirname, './client/build/images'));
 	},
 	filename: function(req, file, cb) {
-		let imgName = req.body.album.toLowerCase().replace(/\s+/g, '-');
+		const imgName = req.body.album.toLowerCase().replace(/\s+/g, '-');
 		cb(null, imgName + '.jpg');
 	},
 });
